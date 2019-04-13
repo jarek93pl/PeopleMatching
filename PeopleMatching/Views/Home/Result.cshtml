@@ -1,0 +1,8 @@
+﻿@model PeopleMatching.Models.MatcherData
+
+@{
+    ViewBag.Title = "Result";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div>@(Model.Men.FirstName + " i " + Model.Women.FirstName + (Model.Matched ? " pasują do siebie": " nie pasują do siebie"))</div>
+

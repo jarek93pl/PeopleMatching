@@ -1,0 +1,19 @@
+﻿@model PeopleMatching.Models.Men
+
+@{
+    ViewBag.Title = "Mężczyzna";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.Partial("PeopleData", @Model)
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Save" class="btn btn-default" />
+        </div>
+    </div>
+}
+
