@@ -41,7 +41,8 @@ namespace PeopleMatching.Logic
                 maxAge = men.DateBirth;
                 minAge = womem.DateBirth;
             }
-            return minAge.AddYears(10) > maxAge;
+            const int maxDifrentYears = 5;
+            return minAge.AddYears(maxDifrentYears) > maxAge;
         }
 
         private static bool MatchGrowth(Men men, Women womem)
